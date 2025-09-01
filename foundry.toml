@@ -24,3 +24,7 @@ remappings = [
 
 # Allow reading test data files
 fs_permissions = [{ access = "read", path = "./test" }]
+
+# Gas settings for Filecoin networks
+gas_limit = 1000000
+gas_price = 2000000000
