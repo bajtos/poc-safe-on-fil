@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.23;
 
-import { MarketAPI } from "filecoin-solidity-api/contracts/v0.8/MarketAPI.sol";
-import { CommonTypes } from "filecoin-solidity-api/contracts/v0.8/types/CommonTypes.sol";
-import { MarketTypes } from "filecoin-solidity-api/contracts/v0.8/types/MarketTypes.sol";
-import { AccountTypes } from "filecoin-solidity-api/contracts/v0.8/types/AccountTypes.sol";
-import { CommonTypes } from "filecoin-solidity-api/contracts/v0.8/types/CommonTypes.sol";
-import { AccountCBOR } from "filecoin-solidity-api/contracts/v0.8/cbor/AccountCbor.sol";
-import { MarketCBOR } from "filecoin-solidity-api/contracts/v0.8/cbor/MarketCbor.sol";
-import { BytesCBOR } from "filecoin-solidity-api/contracts/v0.8/cbor/BytesCbor.sol";
-import { BigInts } from "filecoin-solidity-api/contracts/v0.8/utils/BigInts.sol";
+import { MarketAPI } from "filecoin-solidity/contracts/v0.8/MarketAPI.sol";
+import { CommonTypes } from "filecoin-solidity/contracts/v0.8/types/CommonTypes.sol";
+import { MarketTypes } from "filecoin-solidity/contracts/v0.8/types/MarketTypes.sol";
+import { AccountTypes } from "filecoin-solidity/contracts/v0.8/types/AccountTypes.sol";
+import { CommonTypes } from "filecoin-solidity/contracts/v0.8/types/CommonTypes.sol";
+import { AccountCBOR } from "filecoin-solidity/contracts/v0.8/cbor/AccountCbor.sol";
+import { MarketCBOR } from "filecoin-solidity/contracts/v0.8/cbor/MarketCbor.sol";
+import { BytesCBOR } from "filecoin-solidity/contracts/v0.8/cbor/BytesCbor.sol";
+import { BigInts } from "filecoin-solidity/contracts/v0.8/utils/BigInts.sol";
 import { CBOR } from "solidity-cborutils/contracts/CBOR.sol";
-import { Misc } from "filecoin-solidity-api/contracts/v0.8/utils/Misc.sol";
-import { FilAddresses } from "filecoin-solidity-api/contracts/v0.8/utils/FilAddresses.sol";
+import { Misc } from "filecoin-solidity/contracts/v0.8/utils/Misc.sol";
+import { FilAddresses } from "filecoin-solidity/contracts/v0.8/utils/FilAddresses.sol";
 
 using CBOR for CBOR.CBORBuffer;
 

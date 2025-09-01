@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.23;
 
-import { MarketAPI } from "filecoin-solidity-api/contracts/v0.8/MarketAPI.sol";
-import { MarketTypes } from "filecoin-solidity-api/contracts/v0.8/types/MarketTypes.sol";
-import { CommonTypes } from "filecoin-solidity-api/contracts/v0.8/types/CommonTypes.sol";
+import { MarketAPI } from "filecoin-solidity/contracts/v0.8/MarketAPI.sol";
+import { MarketTypes } from "filecoin-solidity/contracts/v0.8/types/MarketTypes.sol";
+import { CommonTypes } from "filecoin-solidity/contracts/v0.8/types/CommonTypes.sol";
 
 contract FilecoinMarketConsumer {
     CommonTypes.DealLabel public dealLabel;

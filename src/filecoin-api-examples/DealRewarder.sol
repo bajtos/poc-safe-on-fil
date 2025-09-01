@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.23;
 
-import { MarketAPI } from "filecoin-solidity-api/contracts/v0.8/MarketAPI.sol";
-import { MarketTypes } from "filecoin-solidity-api/contracts/v0.8/types/MarketTypes.sol";
-import { CommonTypes } from "filecoin-solidity-api/contracts/v0.8/types/CommonTypes.sol";
-import { Actor } from "filecoin-solidity-api/contracts/v0.8/utils/Actor.sol";
-import { Misc } from "filecoin-solidity-api/contracts/v0.8/utils/Misc.sol";
+import { MarketAPI } from "filecoin-solidity/contracts/v0.8/MarketAPI.sol";
+import { MarketTypes } from "filecoin-solidity/contracts/v0.8/types/MarketTypes.sol";
+import { CommonTypes } from "filecoin-solidity/contracts/v0.8/types/CommonTypes.sol";
+import { Actor } from "filecoin-solidity/contracts/v0.8/utils/Actor.sol";
+import { Misc } from "filecoin-solidity/contracts/v0.8/utils/Misc.sol";
 
-/* 
+/*
 Contract Usage
-    Step   |   Who   |    What is happening  |   Why 
+    Step   |   Who   |    What is happening  |   Why
     ------------------------------------------------
     Deploy | contract owner   | contract owner deploys address is owner who can call addCID  | create contract setting up rules to follow
     AddCID | data pinners     | set up cids that the contract will incentivize in deals      | add request for a deal in the filecoin network, "store data" function
