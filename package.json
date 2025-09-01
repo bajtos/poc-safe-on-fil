@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "calibration:deploy": "forge create --rpc-url https://api.calibration.node.glif.io/rpc/v1 --private-key $PRIVATE_KEY --broadcast src/safe-controller/SafeController.sol:SafeController",
-    "calibration:tick": "forge script script/Tick.sol:Tick --rpc-url https://api.calibration.node.glif.io/rpc/v1 --broadcast -g 200",
+    "calibration:tick": "forge script script/Tick.sol:Tick --rpc-url https://api.calibration.node.glif.io/rpc/v1 --broadcast -g 100000",
     "calibration:verify": "filfox-verifier forge $SAFE_CONTROLLER_ADDRESS src/safe-controller/SafeController.sol:SafeController --chain 314159",
     "lint": "npm run prettier && npm run solhint",
     "lint:check": "npm run prettier:check && npm run solhint:check",
