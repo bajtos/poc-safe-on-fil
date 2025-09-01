@@ -6,6 +6,8 @@ contract SafeController {
     address public controller;
     uint256 public ticker = 0;
 
+    event Ticked(uint256 ticker, address indexed sender);
+
     modifier onlyOwner() {
         require(msg.sender == owner, "Only owner can call this method");
         _;
@@ -43,6 +45,7 @@ contract SafeController {
         )
     {
         ticker += 1;
+        emit Ticked(ticker, msg.sender);
         return (owner, controller, msg.sender, ticker);
     }
 }

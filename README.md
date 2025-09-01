@@ -81,7 +81,7 @@ Let's deploy the SafeController contract to the Calibration testnet:
 npm run calibration:deploy
 ```
 
-This will deploy the DealClient contract to the Calibration testnet. You'll see output similar to:
+This will deploy the SafeController contract to the Calibration testnet. You'll see output similar to:
 
 ```
 Deployer: 0x42C930A33280a7218bc924732d67dd84D6247Af4
@@ -131,3 +131,8 @@ The following method invokes `tick()` via the Safe wallet.
 ```bash
 npm run calibration:tick-via-safe
 ```
+
+Example:
+
+Block number: `2980489`
+Safe TX: https://calibration.filfox.info/en/message/0x995f056ff6a7d88855c2aff3fb93401a022f5f1cffa9362deacb5a2185963a7d
