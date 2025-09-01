@@ -28,6 +28,17 @@ This will clone the repository to your computer, navigate to the newly created d
 
 You can obtain a private key from a wallet provider such as [MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key).
 
+You will need two private keys:
+
+- One for the deployer account (the account that will deploy the contract) - store it in the `PRIVATE_KEY` environment variable, see below.
+- One for the controller account that will be allowed to call the `tick` method of the contract - store it in the `CONTROLLER_PRIVATE_KEY` environment variable, see below.
+
+### Setup a Safe multisig wallet
+
+Follow the instructions on https://safe.filecoin.io/
+
+Store the address of the Safe multisig wallet in `MULTISIG_ADDRESS` environment variable. (Remove the `filecoin-calibration:` prefix.)
+
 ### Configure Environment Variables
 
 Add your private key as an environment variable by running this command:
@@ -99,8 +110,24 @@ Verification Result:
 ✔ ℹ️  Contract already verified at: https://calibration.filfox.info/en/address/0xb364aA01595fbC73c07B6F318dce9A34a1e8527b
 ```
 
-### Invoke the `tick()` method to check permissions
+### Change the controller
+
+Run the following command to change the controller allowed to call the `tick()` method:
+
+```bash
+npm run calibration:set-controller
+```
+
+### Invoke the `tick()` method
+
+The following method calls `tick()` directly using the controller account. The transaction should be reverted because you need to invoke the method via the Safe wallet.
 
 ```bash
 npm run calibration:tick
+```
+
+The following method invokes `tick()` via the Safe wallet.
+
+```bash
+npm run calibration:tick-via-safe
 ```
