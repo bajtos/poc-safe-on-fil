@@ -12,10 +12,10 @@ contract Tick is Script {
         address signerAddress = vm.addr(deployerPrivateKey);
         console.log("Signer address:", signerAddress);
 
-        address safeControllerAddress = vm.envAddress(
-            "SAFE_CONTROLLER_ADDRESS"
+        address deployedContractAddress = vm.envAddress(
+            "DEPLOYED_CONTRACT_ADDRESS"
         );
-        SafeController safeController = SafeController(safeControllerAddress);
+        SafeController safeController = SafeController(deployedContractAddress);
         (
             address owner,
             address controller,

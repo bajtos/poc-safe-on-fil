@@ -15,10 +15,10 @@ contract SetController is Script {
         address multisigAddress = vm.envAddress("MULTISIG_ADDRESS");
         console.log("Multisig address:", multisigAddress);
 
-        address safeControllerAddress = vm.envAddress(
-            "SAFE_CONTROLLER_ADDRESS"
+        address deployedContractAddress = vm.envAddress(
+            "DEPLOYED_CONTRACT_ADDRESS"
         );
-        SafeController safeController = SafeController(safeControllerAddress);
+        SafeController safeController = SafeController(deployedContractAddress);
         safeController.setController(multisigAddress);
 
         vm.stopBroadcast();

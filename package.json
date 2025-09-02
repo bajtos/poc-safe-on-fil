@@ -8,7 +8,7 @@
     "calibration:set-controller": "forge script script/SetController.sol:SetController --rpc-url https://api.calibration.node.glif.io/rpc/v1 --broadcast -g 100000",
     "calibration:tick": "forge script script/Tick.sol:Tick --rpc-url https://api.calibration.node.glif.io/rpc/v1 --broadcast -g 100000",
     "calibration:tick-via-safe": "node --experimental-transform-types script/tick-via-safe.ts",
-    "calibration:verify": "filfox-verifier forge $SAFE_CONTROLLER_ADDRESS src/safe-controller/SafeController.sol:SafeController --chain 314159",
+    "calibration:verify": "filfox-verifier forge $DEPLOYED_CONTRACT_ADDRESS src/safe-controller/SafeController.sol:SafeController --chain 314159",
     "lint": "npm run prettier && npm run solhint",
     "lint:check": "npm run prettier:check && npm run solhint:check",
     "prettier": "prettier --write 'src/**/*.sol'",

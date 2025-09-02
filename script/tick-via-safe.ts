@@ -15,9 +15,9 @@ const safeControllerIface = new Interface(safeControllerAbi)
 const RPC_URL =
   process.env.RPC_URL ?? 'https://api.calibration.node.glif.io/rpc/v1'
 
-const SAFE_CONTROLLER_ADDRESS = process.env.SAFE_CONTROLLER_ADDRESS
-if (!SAFE_CONTROLLER_ADDRESS) {
-  throw new Error('SAFE_CONTROLLER_ADDRESS not set')
+const DEPLOYED_CONTRACT_ADDRESS = process.env.DEPLOYED_CONTRACT_ADDRESS
+if (!DEPLOYED_CONTRACT_ADDRESS) {
+  throw new Error('DEPLOYED_CONTRACT_ADDRESS not set')
 }
 
 const MULTISIG_ADDRESS = process.env.MULTISIG_ADDRESS
@@ -27,7 +27,7 @@ if (!MULTISIG_ADDRESS) {
 
 console.log(
   'Invoking %s .tick() via Safe %s',
-  SAFE_CONTROLLER_ADDRESS,
+  DEPLOYED_CONTRACT_ADDRESS,
   MULTISIG_ADDRESS,
 )
 
@@ -64,7 +64,7 @@ console.log('IS SIGNER AN OWNER?', await safeKit.isOwner(signerAddress))
 // Create a Safe transaction
 
 const safeTransactionData: MetaTransactionData = {
-  to: SAFE_CONTROLLER_ADDRESS,
+  to: DEPLOYED_CONTRACT_ADDRESS,
   value: '0',
   data: safeControllerIface.encodeFunctionData('tick', []),
   operation: OperationType.Call,

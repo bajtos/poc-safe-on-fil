@@ -91,7 +91,7 @@ Transaction hash: 0x858f01f8fa090cfe89c92754dd777bf4f2aad688502f05dfc9e57738f162
 
 ### Verify Contracts on Calibration using Filfox
 
-Set `SAFE_CONTROLLER_ADDRESS` environment variable to the address of the deployed contract.
+Set `DEPLOYED_CONTRACT_ADDRESS` environment variable to the address of the deployed contract.
 
 ```bash
 npm run calibration:verify
