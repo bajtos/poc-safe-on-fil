@@ -44,6 +44,9 @@ contract SafeController {
             uint256 _ticker
         )
     {
+        // Test how transaction failure is reported in the client
+        require(ticker < 2, "Too many ticks");
+
         ticker += 1;
         emit Ticked(ticker, msg.sender);
         return (owner, controller, msg.sender, ticker);
